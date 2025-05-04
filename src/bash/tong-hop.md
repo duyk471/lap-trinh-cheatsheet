@@ -40,3 +40,48 @@ do
 done
 
 ```
+
+### Generate .epub file using mark2epub
+
+```bash
+# Arguments [title]
+mkdir docs/
+mv links.txt docs/
+cd docs/
+mkdir css images
+while read p; do papeer get "$p"; done <links.txt
+
+# Generate description.json (First init a variable)
+description="{\n  \"metadata\": {\n    \"dc:title\": \"$(date +"%Y_%m_%d_%I_%M_%p")\",\n    \"dc:creator\": \"duykhanh471\",\n    \"dc:language\": \"en-US\",\n    \"dc:identifier\": \"\",\n    \"dc:source\": \"\",\n    \"meta\": \"\",\n    \"dc:date\": \"\",\n    \"dc:publisher\": \"\",\n    \"dc:contributor\": \"\",\n    \"dc:rights\": \"\",\n    \"dc:description\": \"\",\n    \"dc:subject\": \"\"\n  },\n  \"cover_image\": \"\",\n  \"default_css\": [],\n  \"chapters\": [\n    "
+for file in $( ls *.md ); do
+  description="${description}{\n      \"markdown\": \"$file\",\n      \"css\": \"\"\n    },"
+done
+
+description="${description::-1}\n  ]\n}"
+
+# Echo the generated content to the new .json file  
+echo -e "${description}" > description.json
+# Move out of the current directory
+cd ..
+# Generate an .epub file from markdown files in the docs/ dir
+python3 /home/duykhanh471/Applications/mark2epub/script.py docs/ "$(date +"%Y_%m_%d_%I_%M_%p").epub"
+```
+
+### Sort by number
+if u want the `ls` output looks like:
+
+```bash
+1.md 2.md 3.md 10.md
+``` 
+
+instead of
+
+```bash
+1.md 10.md 2.md 3.md 
+``` 
+
+here is the command
+
+```bash
+ls *.md | sort -V | awk '{str=str$0" "}END{sub(/, $/,"",str);print str}'
+```

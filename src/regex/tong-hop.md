@@ -24,3 +24,20 @@ Extracted from [this post](https://www.michaelperrin.fr/blog/2019/02/advanced-re
 - Group 2 is the URL of the link.
 - Group 3 is the optional title of the link including the double quotes (this group is necessary for the ? marker).
 - Group 4 is the optional title of the link.
+
+
+### Date Time like
+like:
+
+- 9:59 AM
+- 5:59 PM
+
+```
+([0-9]|[0-1][0-2])\:?([0-5][0-9])? ([A|P]M)
+```
+
+### match empty line
+
+```
+^\s*$
+```
