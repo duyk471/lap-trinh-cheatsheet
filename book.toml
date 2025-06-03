@@ -1,9 +1,0 @@
-[book]
-authors = ["duykhanh471"]
-language = "vi"
-multilingual = false
-src = "src"
-title = "Kho code của duykhanh471"
-
-[build]
-build-dir = "public"
