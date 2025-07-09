@@ -670,11 +670,12 @@ Hoặc
 <button onClick={() => {
   alert('You clicked me!');
 }}>
-````
+```
 
 **Pitfall**
 
 Functions passed to event handlers must be passed, not called. For example:
+
 
 | passing a function (correct) | calling a function (incorrect) |
 | --- | --- |

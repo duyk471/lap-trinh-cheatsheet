@@ -5,77 +5,77 @@ repo_url: https://github.com/duyk471/lap-trinh-cheatsheet
 repo_name: Mở PR cho trang
 
 nav:
-- 'Trang chủ dự án': 'index.md'
-- 'HTML/CSS/JS':
-  - 'HTML/CSS': 
-    - 'Cơ bản': 'html-css/co-ban.md'
-    - 'Nâng cao': 'html-css/nang-cao.md'
-  - 'JS': 
-    - 'Tổng hợp': 'js/index.md' 
-    - 'Array': 'js/array.md'
-    - 'Ngày giờ': 'js/ngay-gio.md'
-    - 'String': 'js/string.md'
-    - 'Object': 'js/object.md'
-    - 'Typescript cơ bản': 'js/typescript.md'
-- 'JS Frameworks': 
-  - 'React': 'js-frameworks/react.md'
-  - 'Svelte': 'js-frameworks/svelte.md'
-  - 'NodeJS': 'js-frameworks/nodejs.md'
-  - 'ExpressJS': 'js-frameworks/expressjs.md'
-- 'Java & Spring': 
-  - 'Java': 
-    - 'Tổng hợp kiến thức': 'java/index.md'
-    - 'Kho snippets':
-      - 'Tổng hợp': 'java/snippets/index.md'
-      - 'Hàng ngày': 'java/snippets/van-de-hang-ngay.md'
-  - 'Spring': 
-    - 'Cơ bản': 'java/spring-boot/index.md'
-    - 'Core': 'java/spring-boot/core.md'
-    - 'Spring Boot': 'java/spring-boot/spring-boot.md'
-    - 'Jpa': 'java/spring-boot/jpa.md'
-    - 'Spring Security': 'java/spring-boot/ss.md'
-    - 'Redis': 'java/spring-boot/redis.md'
-- 'Rust': 
-  - 'Cơ bản': 'rust/index.md'
-  - 'Thuật toán': 'rust/thuat-toan.md'
-  - 'CLI': 'rust/command-line.md'
-  - 'System': 'rust/he-thong.md'
-  - 'Internet': 'rust/internet.md'
-  - 'Tệp':
-    - 'EPUB': 'rust/tep/epub.md'
-    - 'Git': 'rust/tep/git.md'
-    - 'HTML': 'rust/tep/html.md'
-    - 'RSS': 'rust/tep/rss.md'
-- 'Những thứ hay ho': 
-  - 'Bash': 'linh-tinh/bash.md'
-  - 'Regex': 'linh-tinh/regex.md'
-- 'Công cụ CLI':
-  - 'yt-dlp': 'cli/yt-dlp.md'
-  - 'Pandoc': 'cli/pandoc.md'
-  - 'Các ứng dụng khác': 'cli/cac-ung-dung-khac.md'
-- 'Khoa học máy tính':
-  - 'Kiến trúc máy tính': 
-    - 'Trang chủ': 'khmt/ktmt/index.md'
-    - 'Adder Chip': 'khmt/ktmt/Adder Chip.md'
-    - 'Arithmetic Logic Unit': 'khmt/ktmt/Arithmetic Logic Unit.md'
-    - 'X': 'khmt/ktmt/Arithmetic Logic.md'
-    - 'X': 'khmt/ktmt/Assembly.md'
-    - 'X': 'khmt/ktmt/Bit.md'
-    - 'X': 'khmt/ktmt/Boolean Algebra.md'
-    - 'X': 'khmt/ktmt/CPU.md'
-    - 'X': 'khmt/ktmt/Cache.md'
-    - 'X': 'khmt/ktmt/Combinational chips.md'
-    - 'X': 'khmt/ktmt/Control Unit.md'
-    - 'X': 'khmt/ktmt/Cổng Logic.md'
-    - 'X': 'khmt/ktmt/Input & Output.md'
-    - 'X': 'khmt/ktmt/Machine Language.md'
-    - 'X': 'khmt/ktmt/Memory.md'
-    - 'X': 'khmt/ktmt/Program Counter.md'
-    - 'X': 'khmt/ktmt/Register.md'
-    - 'X': 'khmt/ktmt/Sequential chips.md'
-- 'Toán':
-  - 'Toán cao cấp': 'toan/cao-cap.md'
-  - 'Toán rời rạc': 'toan/roi-rac.md'
+  - 'Trang chủ dự án': 'index.md'
+  - 'HTML/CSS/JS':
+    - 'HTML/CSS': 
+      - 'Cơ bản': 'html-css/co-ban.md'
+      - 'Nâng cao': 'html-css/nang-cao.md'
+    - 'JS': 
+      - 'Tổng hợp': 'js/index.md' 
+      - 'Array': 'js/array.md'
+      - 'Ngày giờ': 'js/ngay-gio.md'
+      - 'String': 'js/string.md'
+      - 'Object': 'js/object.md'
+      - 'Typescript cơ bản': 'js/typescript.md'
+  - 'JS Frameworks': 
+    - 'React': 'js-frameworks/react.md'
+    - 'Svelte': 'js-frameworks/svelte.md'
+    - 'NodeJS': 'js-frameworks/nodejs.md'
+    - 'ExpressJS': 'js-frameworks/expressjs.md'
+  - 'Java & Spring': 
+    - 'Java': 
+      - 'Tổng hợp kiến thức': 'java/index.md'
+      - 'Kho snippets':
+        - 'Tổng hợp': 'java/snippets/index.md'
+        - 'Hàng ngày': 'java/snippets/van-de-hang-ngay.md'
+    - 'Spring': 
+      - 'Cơ bản': 'java/spring-boot/index.md'
+      - 'Core': 'java/spring-boot/core.md'
+      - 'Spring Boot': 'java/spring-boot/spring-boot.md'
+      - 'Jpa': 'java/spring-boot/jpa.md'
+      - 'Spring Security': 'java/spring-boot/ss.md'
+      - 'Redis': 'java/spring-boot/redis.md'
+  - 'Rust': 
+    - 'Cơ bản': 'rust/index.md'
+    - 'Thuật toán': 'rust/thuat-toan.md'
+    - 'CLI': 'rust/command-line.md'
+    - 'System': 'rust/he-thong.md'
+    - 'Internet': 'rust/internet.md'
+    - 'Tệp':
+      - 'EPUB': 'rust/tep/epub.md'
+      - 'Git': 'rust/tep/git.md'
+      - 'HTML': 'rust/tep/html.md'
+      - 'RSS': 'rust/tep/rss.md'
+  - 'Những thứ hay ho': 
+    - 'Bash': 'linh-tinh/bash.md'
+    - 'Regex': 'linh-tinh/regex.md'
+  - 'Công cụ CLI':
+    - 'yt-dlp': 'cli/yt-dlp.md'
+    - 'Pandoc': 'cli/pandoc.md'
+    - 'Các ứng dụng khác': 'cli/cac-ung-dung-khac.md'
+  - 'Khoa học máy tính':
+    - 'Kiến trúc máy tính': 
+      - 'Trang chủ': 'khmt/ktmt/index.md'
+      - 'Adder Chip': 'khmt/ktmt/Adder Chip.md'
+      - 'Arithmetic Logic Unit': 'khmt/ktmt/Arithmetic Logic Unit.md'
+      - 'X': 'khmt/ktmt/Arithmetic Logic.md'
+      - 'X': 'khmt/ktmt/Assembly.md'
+      - 'X': 'khmt/ktmt/Bit.md'
+      - 'X': 'khmt/ktmt/Boolean Algebra.md'
+      - 'X': 'khmt/ktmt/CPU.md'
+      - 'X': 'khmt/ktmt/Cache.md'
+      - 'X': 'khmt/ktmt/Combinational chips.md'
+      - 'X': 'khmt/ktmt/Control Unit.md'
+      - 'X': 'khmt/ktmt/Cổng Logic.md'
+      - 'X': 'khmt/ktmt/Input & Output.md'
+      - 'X': 'khmt/ktmt/Machine Language.md'
+      - 'X': 'khmt/ktmt/Memory.md'
+      - 'X': 'khmt/ktmt/Program Counter.md'
+      - 'X': 'khmt/ktmt/Register.md'
+      - 'X': 'khmt/ktmt/Sequential chips.md'
+  - 'Toán':
+    - 'Toán cao cấp': 'toan/cao-cap.md'
+    - 'Toán rời rạc': 'toan/roi-rac.md'
 
       
 theme:
