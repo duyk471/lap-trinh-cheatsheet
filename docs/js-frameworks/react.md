@@ -13,8 +13,7 @@ npx create-react-router@latest
 Cái này sẽ tự động setup Framework cho các ông làm việc. Tôi cũng không hiểu lắm và vì cũng mới học nên tôi sẽ chọn "Build a React app from Scratch".
 
 ### Build a React app from Scratch
-Đọc thêm trong [Build a React app from Scratch](https://react.dev/learn/build-a-react-app-from-scratch
-). Chọn Vite vì thấy mấy ông dev cũng dùng và không biết gì về Parcel với Rsbuild.
+Đọc thêm trong [Build a React app from Scratch](https://react.dev/learn/build-a-react-app-from-scratch). Chọn Vite vì thấy mấy ông dev cũng dùng và không biết gì về Parcel với Rsbuild.
 
 ```
 npm create vite@latest my-app -- --template react
