@@ -1,0 +1,3084 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Một Cheatsheet lớn tổng hợp lại rất nhiều thứ hay mà mình đã học được khi học lập trình.">
+      
+      
+        <meta name="author" content="duykhanh471">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../spring-boot/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Core - Lập trình Cheatsheet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="grey">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#khai-niem-tightly-coupled-lien-ket-rang-buoc-va-cach-e-loosely-coupled" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Lập trình Cheatsheet" class="md-header__button md-logo" aria-label="Lập trình Cheatsheet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lập trình Cheatsheet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Core
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="grey"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/duyk471/lap-trinh-cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Mở PR cho trang
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trang chủ dự án
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../html-css/co-ban/" class="md-tabs__link">
+          
+  
+  
+  HTML/CSS/JS
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../js-frameworks/react/" class="md-tabs__link">
+          
+  
+  
+  JS Frameworks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Java & Spring
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../rust/" class="md-tabs__link">
+          
+  
+  
+  Rust
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../linh-tinh/bash/" class="md-tabs__link">
+          
+  
+  
+  Những thứ hay ho
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cli/yt-dlp/" class="md-tabs__link">
+          
+  
+  
+  Công cụ CLI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../khmt/ktmt/" class="md-tabs__link">
+          
+  
+  
+  Khoa học máy tính
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../toan/cao-cap/" class="md-tabs__link">
+          
+  
+  
+  Toán
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Lập trình Cheatsheet" class="md-nav__button md-logo" aria-label="Lập trình Cheatsheet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Lập trình Cheatsheet
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/duyk471/lap-trinh-cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Mở PR cho trang
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trang chủ dự án
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML/CSS/JS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML/CSS/JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML/CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            HTML/CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../html-css/co-ban/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cơ bản
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../html-css/nang-cao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nâng cao
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tổng hợp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Array
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/ngay-gio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ngày giờ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    String
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Object
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typescript cơ bản
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JS Frameworks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            JS Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js-frameworks/react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    React
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js-frameworks/svelte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Svelte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js-frameworks/nodejs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NodeJS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js-frameworks/expressjs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ExpressJS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java & Spring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Java & Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tổng hợp kiến thức
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kho snippets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kho snippets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tổng hợp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snippets/van-de-hang-ngay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hàng ngày
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Spring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cơ bản
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Định nghĩa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-du-de-hieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ví dụ dễ hiểu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-code-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cách code level 1:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-lam-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cách làm level 2:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-lam-level-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cách làm level 3:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#giai-thich-dependency-injection-di-va-ioc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giải thích Dependency Injection (DI) và IoC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Giải thích Dependency Injection (DI) và IoC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependency-injection-di" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Injection (DI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inversion-of-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inversion of Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring-boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spring Boot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jpa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jpa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spring Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Rust
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Rust
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cơ bản
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/thuat-toan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thuật toán
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/command-line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/he-thong/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Internet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tệp
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tệp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/tep/epub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EPUB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/tep/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/tep/html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/tep/rss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Những thứ hay ho
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Những thứ hay ho
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linh-tinh/bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linh-tinh/regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Công cụ CLI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Công cụ CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli/yt-dlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    yt-dlp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli/pandoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandoc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli/cac-ung-dung-khac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Các ứng dụng khác
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Khoa học máy tính
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Khoa học máy tính
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kiến trúc máy tính
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kiến trúc máy tính
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trang chủ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Adder%20Chip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adder Chip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Arithmetic%20Logic%20Unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arithmetic Logic Unit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Arithmetic%20Logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Bit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Boolean%20Algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/CPU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Combinational%20chips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Control%20Unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/C%E1%BB%95ng%20Logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Input%20%26%20Output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Machine%20Language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Program%20Counter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Register/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Sequential%20chips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Toán
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Toán
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../toan/cao-cap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toán cao cấp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../toan/roi-rac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toán rời rạc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inh-nghia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Định nghĩa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-du-de-hieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ví dụ dễ hiểu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-code-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cách code level 1:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-lam-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cách làm level 2:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-lam-level-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cách làm level 3:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#giai-thich-dependency-injection-di-va-ioc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giải thích Dependency Injection (DI) và IoC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Giải thích Dependency Injection (DI) và IoC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependency-injection-di" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Injection (DI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inversion-of-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inversion of Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="khai-niem-tightly-coupled-lien-ket-rang-buoc-va-cach-e-loosely-coupled">Khái niệm tightly-coupled (liên kết ràng buộc) và cách để loosely-coupled<a class="headerlink" href="#khai-niem-tightly-coupled-lien-ket-rang-buoc-va-cach-e-loosely-coupled" title="Permanent link">&para;</a></h1>
+<h3 id="inh-nghia">Định nghĩa<a class="headerlink" href="#inh-nghia" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tight-coupling</strong> hay "liên kết ràng buộc" là một khái niệm trong Java ám chỉ việc mối quan hệ giữa các Class quá chặt chẽ. Khi yêu cầu thay đổi logic hay một class bị lỗi sẽ dẫn tới ảnh hưởng tới toàn bộ các Class khác.</li>
+<li><strong>loosely-coupled</strong> là cách ám chỉ việc làm giảm bớt sự phụ thuộc giữa các Class với nhau.</li>
+</ul>
+<h3 id="vi-du-de-hieu"><strong>Ví dụ dễ hiểu</strong><a class="headerlink" href="#vi-du-de-hieu" title="Permanent link">&para;</a></h3>
+<p>Lấy một ví dụ:</p>
+<p>Bạn có một Class thực thi một nhiệm vụ cực kỳ phức tạp, và một trong số đó là việc sắp xếp dữ liệu trước khi xử lý.</p>
+<h3 id="cach-code-level-1"><strong>Cách code level 1:</strong><a class="headerlink" href="#cach-code-level-1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>public class BubbleSortAlgorithm{
+
+    public void sort(int[] array) {
+        // TODO: Add your logic here
+        System.out.println(&quot;Đã sắp xếp bằng thuật toán sx nổi bọt&quot;);
+    }
+}
+
+public class VeryComplexService {
+    private BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
+
+    public VeryComplexService(){
+
+    }
+
+    public void complexBusiness(int array[]){
+        bubbleSortAlgorithm.sort(array);
+        // TODO: more logic here
+    }
+}
+</code></pre></div>
+<p>Với cách làm ở trên, <code>VeryComplexService</code> đã hoàn thiện được nhiệm vụ, tuy nhiên, khi có yêu cầu <strong>thay đổi</strong> thuật toán sắp xếp sang <code>QuickSort</code> thì nghe vẻ chúng ta sẽ phải sửa lại hoàn toàn cả 2 Class trên.</p>
+<p>Ngoài ra <code>BubbleSortAlgorithm</code> sẽ chỉ tồn tại nếu <code>VeryComplexService</code> tồn tại, vì <code>VeryComplexService</code> tạo đối tượng <code>BubbleSortAlgorithm</code> bên trong nó (hay nói cách khác là sự sống chết của <code>BubbleSortAlgorithm</code> sẽ do <code>VeryComplexService</code> quyết định), theo như cách implement này, nó là liên kết rất chặt với nhau.</p>
+<h3 id="cach-lam-level-2"><strong>Cách làm level 2:</strong><a class="headerlink" href="#cach-lam-level-2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>public interface SortAlgorithm {
+    /**
+     * Sắp xếp mảng đầu vào
+     * @param array
+     */
+    public void sort(int array[]);
+}
+
+public class BubbleSortAlgorithm implements SortAlgorithm{
+
+    @Override
+    public void sort(int[] array) {
+        // TODO: Add your logic here
+        System.out.println(&quot;Đã sắp xếp bằng thuật toán sx nổi bọt&quot;);
+    }
+}
+
+public class VeryComplexService {
+    private SortAlgorithm sortAlgorithm;
+    public VeryComplexService(){
+        sortAlgorithm = new BubbleSortAlgorithm();
+    }
+
+    public void complexBusiness(int array[]){
+        sortAlgorithm.sort(array);
+        // TODO: more logic here
+    }
+}
+</code></pre></div>
+<p>Với cách làm này, <code>VeryComplexService</code> sẽ chỉ quan hệ với một interface <code>SortAlgorithm</code>. Với cách này thì mỗi quan hệ giảm bớt sự liên kết, nhưng nó không thay đổi được việc thuật toán vẫn đang là <code>BubbleSortAlgorithm</code>.</p>
+<h3 id="cach-lam-level-3"><strong>Cách làm level 3:</strong><a class="headerlink" href="#cach-lam-level-3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>public interface SortAlgorithm {
+    /**
+     * Sắp xếp mảng đầu vào
+     * @param array
+     */
+    public void sort(int array[]);
+}
+
+public class BubbleSortAlgorithm implements SortAlgorithm{
+
+    @Override
+    public void sort(int[] array) {
+        // TODO: Add your logic here
+        System.out.println(&quot;Đã sắp xếp bằng thuật toán sx nổi bọt&quot;);
+    }
+}
+
+public class QuicksortAlgorithm implements SortAlgorithm {
+    @Override
+    public void sort(int[] array) {
+        // TODO: Add your logic here
+        System.out.println(&quot;Đã sắp xếp bằng thuật sx nhanh&quot;);
+
+    }
+}
+
+public class VeryComplexService {
+    private SortAlgorithm sortAlgorithm;
+    public VeryComplexService(SortAlgorithm sortAlgorithm){
+        this.sortAlgorithm = sortAlgorithm;
+    }
+
+    public void complexBusiness(int array[]){
+        sortAlgorithm.sort(array);
+        // TODO: more logic here
+    }
+}
+
+public static void main(String[] args) {
+    SortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
+    SortAlgorithm quickSortAlgorithm = new QuicksortAlgorithm();
+    VeryComplexService business1 = new VeryComplexService(bubbleSortAlgorithm);
+    VeryComplexService business2 = new VeryComplexService(quickSortAlgorithm);
+}
+</code></pre></div>
+<p>Cách thứ ba này cũng là cách làm phổ biển nhất. Mối liên hệ giữa 2 Class đã "lỏng lẻo" hơn trước rất nhiều. <code>VeryComplexService</code> sẽ không quan tâm tới việc thuật toán sắp xép là gì nữa, mà chỉ cần tập trung vào nghiệp vụ. Còn <code>SortAlgorithm</code> sẽ được đưa vào từ bên ngoài tùy theo nhu cầu sử dụng.</p>
+<h3 id="dependency-injection"><strong>Dependency Injection</strong><a class="headerlink" href="#dependency-injection" title="Permanent link">&para;</a></h3>
+<p>Sau khi bạn đã nắm được 2 khái niệm <strong>tight-coupling</strong> và <strong>loosely-coupled</strong> thì sẽ có thể hiểu dễ dàng khái niệm <strong>Dependency Injection</strong>. Một trong những nhân tố chính giúp cuộc đời lập trình Java của bạn trở nên tươi sáng hơn.</p>
+<h2 id="giai-thich-dependency-injection-di-va-ioc">Giải thích Dependency Injection (DI) và IoC<a class="headerlink" href="#giai-thich-dependency-injection-di-va-ioc" title="Permanent link">&para;</a></h2>
+<p>Nhưng không phải dùng quả minh họa của Loda =)).</p>
+<h3 id="dependency-injection-di">Dependency Injection (DI)<a class="headerlink" href="#dependency-injection-di" title="Permanent link">&para;</a></h3>
+<p>Trong tài liệu có nói thế này: <em>Dependency Injection is a design pattern,...</em>. Thế thì bạn có thể hiểu nôm na nó là một phương pháp lập trình. Dưới đây là ví dụ (Khum thích ví dụ của Loda nên viết lại chút):</p>
+<div class="highlight"><pre><span></span><code>public class BoDoi {
+    private AK47 gun; // Mỗi chú bộ đội sẽ cầm AK47 khi đi ra ngoài chẳng hạn
+    public BoDoi(){
+      gun = new AK47(); // Khi anh bộ đội ra ngoài, anh sẽ vác theo khẩu AK47
+    }
+}
+</code></pre></div>
+<p>Trước hết, qua đoạn code này, bạn sẽ thấy là khi bạn tạo ra một anh <code>BoDoi</code>, bạn sẽ tạo ra thêm 1 khẩu <code>AK47</code> đi kèm với anh ấy. Lúc này,<code>AK47</code> tồn tại mang ý nghĩa là dependency (phụ thuộc) của <code>BoDoi</code>.</p>
+<p>Khi khởi tạo thuộc tính như này, bạn vô tình tạo ra một điểm thắt nút trong chương trình của mình, giả sử, <code>BoDoi</code> muốn cầm M4A1 hay AWP hoặc cần gì cầm súng khi đi mua bia cơ chứ? Bạn sẽ phải thay class <code>AK47</code> thành <code>M4A1</code> hay <code>TayKhông</code> ư?</p>
+<p>Hay nguy hiểm hơn, khẩu <code>AK47</code> bị hỏng? (code lớp <code>AK47</code> không hoạt động?) nó sẽ ảnh hưởng trực tiếp tới chú bộ đội <code>BoDoi</code>.</p>
+<p>Vấn đề là ở đó, nguyên tắc là:</p>
+<blockquote>
+<p>Các Class không nên phụ thuộc vào các kế thừa cấp thấp, mà nên phụ thuộc vào Abstraction (lớp trừu tượng).</p>
+</blockquote>
+<p>Nghe hơi khó hiểu. Bây giờ mình thay đoạn code như này:</p>
+<div class="highlight"><pre><span></span><code>// Một interface cho việc dùng súng
+public interface EquipGun {
+  public void equip();
+}
+
+// Một object cấp thấp, implement của EquipGun
+public class AK47 implements EquipGun {
+  public void equip() {
+    System.out.println(&quot;Đã đeo AK47&quot;);
+  }
+}
+
+// Bây giờ BoDoi chỉ phụ thuộc vào EquipGun. nếu muốn thay đổi súng của anh ấy, chúng ta chỉ cần cho EquipGun một thể hiện mới.
+
+public class BoDoi {
+    private EquipGun equipGun;
+    public BoDoi() {
+      equipGun = new AK47();
+    }
+}
+</code></pre></div>
+<p>Tới đây, chúng ta mới chỉ <code>Abtract</code> hóa thuộc tính của <code>BoDoi</code> mà thôi, còn thực tế, <code>BoDoi</code> vẫn đang bị gắn với một khẩu <code>AK47</code> duy nhất. Vậy muốn thay súng cho anh ấy, bạn phải làm như nào.</p>
+<p>Phải sửa <code>code</code> thêm chút nữa:</p>
+<div class="highlight"><pre><span></span><code>public class BoDoi{
+    private EquipGun gun;
+    public BoDoi(EquipGun anything){
+      this.gun = anything // Tạo ra một anh BoDoi, với súng tùy biến
+      // Không bị phụ thuộc quá nhiều vào thời điểm khởi tạo, hay code.
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    EquipGun AK47 = new AK47(); // Tạo ra đối tượng AK47 ở ngoài đối tượng
+    BoDoi truongAnhNgoc = new BoDoi(AK47); // Cho anh đeo súng khi được khởi tạo
+  }
+}
+</code></pre></div>
+<p>Với đoạn code ở trên, chúng ta đã_gần như tách được <code>AK47</code> ra hoàn toàn khỏi <code>BoDoi</code>. điều này làm giảm sự phụ thuộc giữa<code>BoDoi</code>và<code>AK47</code>. Mà tăng tính tùy biến, linh hoạt cho<code>code</code>.</p>
+<p>Bây giờ <code>BoDoi</code> sẽ hoạt động với <code>EquipGun</code> mà thôi. Và <code>EquipGun</code> ở đâu ra? Chúng ta tạo ra và đưa nó vào <code>(Inject)</code> anh <code>BoDoi</code>.</p>
+<p>Khái niệm <code>Dependency Injection</code> từ đây mà ra~</p>
+<blockquote>
+<p>Dependency Injection là việc các Object nên phụ thuộc vào các Abstract Class và thể hiện chi tiết của nó sẽ được Inject vào đối tượng lúc runtime.</p>
+</blockquote>
+<p>Bây giờ muốn <code>BoDoi</code> dùng súng gì khác, bạn chỉ cần tạo một Class kế thừa <code>EquipGun</code> và <em>Inject</em> (dịch là <em>Tiêm vào</em> cũng được) nó vào <code>BoDoi</code> là xong!</p>
+<p>Các cách để <em>Inject dependency</em> vào một đối tượng có thể kể đến như sau:</p>
+<ul>
+<li>Constructor Injection: Cái này chính là ví dụ của mình, tiêm dependency ngay vào<code>Contructor</code> cho tiện.</li>
+<li>Setter Injection:  Xài <code>BoDoi.setEquipGun(new P2000())</code> (Round đầu chỉ cần P2000 thôi)</li>
+<li>Interface Injection : Mỗi <code>Class</code> muốn inject cái gì, thì phải <em>implement</em> một<code>Interface</code> có chứa một hàm <code>inject(xx)</code> (Gần như thay thế cho setter ý bạn). Rồi bạn muốn inject gì đó thì gọi cái hàm <code>inject(xx)</code> ra. Cách này hơi dài và khó cho người mới.</li>
+</ul>
+<h3 id="inversion-of-control">Inversion of Control<a class="headerlink" href="#inversion-of-control" title="Permanent link">&para;</a></h3>
+<p><code>Dependency Injection</code> giúp chúng ta dễ dàng mở rộng <code>code</code> và giảm sự phụ thuộc giữa các dependency với nhau. Tuy nhiên, lúc này, khi code bạn sẽ phải kiêm thêm nhiệm vụ <code>Inject dependency (tiêm sự phụ thuộc)</code>. Thử tưởng tượng một <code>Class</code> có hàng chục dependency thì bạn sẽ phải tự tay inject từng ý cái. Việc này lại dẫn tới khó khăn trong việc code, quản lý code và dependency</p>
+<div class="highlight"><pre><span></span><code>public static void main(String[] args) {
+    EquipGun AK47 = new AK47();
+    AoChongDan gucci = new AoChongDan();
+    MuBaoHiem muCoi = new MuBaoHiem();
+    BoDoi truongAnhNgoc = new BoDoi(AK47, gucci, muCoi);
+}
+</code></pre></div>
+<p>Bây giờ giả sử, chúng ta định nghĩa trước toàn bộ các <code>dependency</code> có trong Project, mô tả nó và tống nó vào 1 cái <code>kho</code> và giao cho một thằng tên là <code>framework</code> quản lý. Bất kỳ các <code>Class</code> nào khi khởi tạo, nó cần dependency gì, thì cái <code>framework</code> này sẽ tự tìm trong <code>kho</code> rồi <em>inject</em> vào đối tượng thay chúng ta. sẽ tiện hơn phải không?</p>
+<p>Và, đó cũng chính là nguyên lý chính của<code>Inversion of Control (IOC)</code>-<code>Đảo chiều sự điều khiển</code></p>
+<p>Nguyên văn Wiki:</p>
+<blockquote>
+<p>Inversion of Control is a programming principle. flow of control within the application is not controlled by the application itself, but rather by the underlying framework.</p>
+</blockquote>
+<p>Khi đó, code chúng ta sẽ chỉ cần như này, để lấy ra 1 đối tượng:</p>
+<div class="highlight"><pre><span></span><code>@Override
+public void run(String... args) throws Exception {
+    BoDoi BoDoi = context.getBean(BoDoi.class);
+}
+</code></pre></div>
+<p>Đối với <code>Java</code> thì có một số Framework hỗ trợ chúng ta<code>Inversion of Control (IOC)</code>. Thường thì dùng luôn Spring framework. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlighting", "search.share"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

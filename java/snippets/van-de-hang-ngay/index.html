@@ -1,0 +1,4323 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Một Cheatsheet lớn tổng hợp lại rất nhiều thứ hay mà mình đã học được khi học lập trình.">
+      
+      
+        <meta name="author" content="duykhanh471">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../spring-boot/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Hàng ngày - Lập trình Cheatsheet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="grey">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java-code-snippets-for-everyday-problems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Lập trình Cheatsheet" class="md-header__button md-logo" aria-label="Lập trình Cheatsheet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lập trình Cheatsheet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hàng ngày
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="grey"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/duyk471/lap-trinh-cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Mở PR cho trang
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trang chủ dự án
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../html-css/co-ban/" class="md-tabs__link">
+          
+  
+  
+  HTML/CSS/JS
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../js-frameworks/react/" class="md-tabs__link">
+          
+  
+  
+  JS Frameworks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Java & Spring
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../rust/" class="md-tabs__link">
+          
+  
+  
+  Rust
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../linh-tinh/bash/" class="md-tabs__link">
+          
+  
+  
+  Những thứ hay ho
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cli/yt-dlp/" class="md-tabs__link">
+          
+  
+  
+  Công cụ CLI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../khmt/ktmt/" class="md-tabs__link">
+          
+  
+  
+  Khoa học máy tính
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../toan/cao-cap/" class="md-tabs__link">
+          
+  
+  
+  Toán
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Lập trình Cheatsheet" class="md-nav__button md-logo" aria-label="Lập trình Cheatsheet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Lập trình Cheatsheet
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/duyk471/lap-trinh-cheatsheet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Mở PR cho trang
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trang chủ dự án
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML/CSS/JS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML/CSS/JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML/CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            HTML/CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../html-css/co-ban/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cơ bản
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../html-css/nang-cao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nâng cao
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tổng hợp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Array
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/ngay-gio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ngày giờ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    String
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Object
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js/typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typescript cơ bản
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JS Frameworks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            JS Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js-frameworks/react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    React
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js-frameworks/svelte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Svelte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js-frameworks/nodejs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NodeJS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../js-frameworks/expressjs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ExpressJS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java & Spring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Java & Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tổng hợp kiến thức
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kho snippets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kho snippets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tổng hợp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Hàng ngày
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hàng ngày
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro-calculating-factorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro: Calculating Factorial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro: Calculating Factorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-maximum-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Maximum Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reversing a String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-if-a-number-is-prime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if a Number is Prime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting an Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-fibonacci-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Fibonacci Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-strings-to-integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Strings to Integers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-random-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating Random Numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-if-a-string-is-palindrome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if a String is Palindrome
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-current-date-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the Current Date and Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-duplicates-from-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Duplicates from an Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-length-of-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Length of a String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-if-two-strings-are-anagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if Two Strings are Anagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculating-the-power-of-a-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating the Power of a Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reversing an Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-minimum-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Minimum Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-integers-to-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Integers to Strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculating-the-average-of-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating the Average of an Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-if-an-array-is-sorted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if an Array is Sorted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-strings-to-doubles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Strings to Doubles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-for-an-element-in-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching for an Element in an Array
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-using-java-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Using Java Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Using Java Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-descriptive-variable-and-method-namess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Descriptive Variable and Method Namess
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#follow-coding-conventionss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow Coding Conventionss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-exceptions-properlyy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handle Exceptions Properlyy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-meaningful-class-and-method-modifierss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Meaningful Class and Method Modifierss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-code-snippetss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Code Snippetss
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizing-java-code-snippets-for-everyday-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizing Java Code Snippets for Everyday Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimizing Java Code Snippets for Everyday Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-efficient-data-structuress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Efficient Data Structuress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimize-memory-usagee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimize Memory Usagee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-unnecessary-operationss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid Unnecessary Operationss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-efficient-algorithmss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Efficient Algorithmss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-unnecessary-string-concatenationn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid Unnecessary String Concatenationn
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries-and-frameworks-for-java-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libraries and Frameworks for Java Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Libraries and Frameworks for Java Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache-commonss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache Commonss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guavaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guavaa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#junitt" class="md-nav__link">
+    <span class="md-ellipsis">
+      JUnitt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-frameworkk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spring Frameworkk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jacksonn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jacksonn
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoiding-common-mistakes-with-java-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoiding Common Mistakes with Java Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Avoiding Common Mistakes with Java Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-handling-exceptions-properlyy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not Handling Exceptions Properlyy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-inefficient-data-structures-or-algorithmss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Inefficient Data Structures or Algorithmss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-testing-code-snippetss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not Testing Code Snippetss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-coding-conventionss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignoring Coding Conventionss
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Spring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Spring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spring-boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cơ bản
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spring-boot/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spring-boot/spring-boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spring Boot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spring-boot/jpa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jpa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spring-boot/ss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spring Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spring-boot/redis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Rust
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Rust
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cơ bản
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/thuat-toan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thuật toán
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/command-line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/he-thong/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Internet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tệp
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tệp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/tep/epub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EPUB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/tep/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/tep/html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rust/tep/rss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Những thứ hay ho
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Những thứ hay ho
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linh-tinh/bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linh-tinh/regex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Regex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Công cụ CLI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Công cụ CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli/yt-dlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    yt-dlp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli/pandoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandoc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli/cac-ung-dung-khac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Các ứng dụng khác
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Khoa học máy tính
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Khoa học máy tính
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kiến trúc máy tính
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kiến trúc máy tính
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trang chủ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Adder%20Chip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adder Chip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Arithmetic%20Logic%20Unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arithmetic Logic Unit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Arithmetic%20Logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Bit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Boolean%20Algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/CPU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Combinational%20chips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Control%20Unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/C%E1%BB%95ng%20Logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Input%20%26%20Output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Machine%20Language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Program%20Counter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Register/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../khmt/ktmt/Sequential%20chips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Toán
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Toán
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../toan/cao-cap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toán cao cấp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../toan/roi-rac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toán rời rạc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro-calculating-factorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro: Calculating Factorial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro: Calculating Factorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-maximum-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Maximum Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reversing a String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-if-a-number-is-prime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if a Number is Prime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting an Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-fibonacci-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Fibonacci Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-strings-to-integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Strings to Integers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-random-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating Random Numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-if-a-string-is-palindrome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if a String is Palindrome
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-current-date-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the Current Date and Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-duplicates-from-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Duplicates from an Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-length-of-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Length of a String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-if-two-strings-are-anagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if Two Strings are Anagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculating-the-power-of-a-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating the Power of a Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reversing an Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-minimum-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Minimum Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-integers-to-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Integers to Strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculating-the-average-of-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating the Average of an Array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-if-an-array-is-sorted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if an Array is Sorted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-strings-to-doubles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Strings to Doubles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-for-an-element-in-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching for an Element in an Array
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-using-java-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Using Java Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Using Java Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-descriptive-variable-and-method-namess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Descriptive Variable and Method Namess
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#follow-coding-conventionss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow Coding Conventionss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-exceptions-properlyy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handle Exceptions Properlyy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-meaningful-class-and-method-modifierss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Meaningful Class and Method Modifierss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-code-snippetss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Code Snippetss
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizing-java-code-snippets-for-everyday-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizing Java Code Snippets for Everyday Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimizing Java Code Snippets for Everyday Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-efficient-data-structuress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Efficient Data Structuress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimize-memory-usagee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimize Memory Usagee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-unnecessary-operationss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid Unnecessary Operationss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-efficient-algorithmss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Efficient Algorithmss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-unnecessary-string-concatenationn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid Unnecessary String Concatenationn
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries-and-frameworks-for-java-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libraries and Frameworks for Java Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Libraries and Frameworks for Java Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache-commonss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache Commonss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guavaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guavaa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#junitt" class="md-nav__link">
+    <span class="md-ellipsis">
+      JUnitt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-frameworkk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spring Frameworkk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jacksonn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jacksonn
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoiding-common-mistakes-with-java-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoiding Common Mistakes with Java Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Avoiding Common Mistakes with Java Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-handling-exceptions-properlyy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not Handling Exceptions Properlyy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-inefficient-data-structures-or-algorithmss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Inefficient Data Structures or Algorithmss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-testing-code-snippetss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not Testing Code Snippetss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-coding-conventionss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignoring Coding Conventionss
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="java-code-snippets-for-everyday-problems">Java Code Snippets for Everyday Problems<a class="headerlink" href="#java-code-snippets-for-everyday-problems" title="Permanent link">&para;</a></h1>
+<p>Lấy từ trang <a href="https://www.squash.io/">squash.io</a></p>
+<ul>
+<li><a href="#intro-calculating-factorial">Intro: Calculating Factorial</a><ul>
+<li><a href="#finding-the-maximum-number">Finding the Maximum Number</a></li>
+<li><a href="#reversing-a-string">Reversing a String</a></li>
+<li><a href="#checking-if-a-number-is-prime">Checking if a Number is Prime</a></li>
+<li><a href="#sorting-an-array">Sorting an Array</a></li>
+<li><a href="#finding-the-fibonacci-sequence">Finding the Fibonacci Sequence</a></li>
+<li><a href="#converting-strings-to-integers">Converting Strings to Integers</a></li>
+<li><a href="#generating-random-numbers">Generating Random Numbers</a></li>
+<li><a href="#checking-if-a-string-is-palindrome">Checking if a String is Palindrome</a></li>
+<li><a href="#getting-the-current-date-and-time">Getting the Current Date and Time</a></li>
+<li><a href="#removing-duplicates-from-an-array">Removing Duplicates from an Array</a></li>
+<li><a href="#finding-the-length-of-a-string">Finding the Length of a String</a></li>
+<li><a href="#checking-if-two-strings-are-anagrams">Checking if Two Strings are Anagrams</a></li>
+<li><a href="#calculating-the-power-of-a-number">Calculating the Power of a Number</a></li>
+<li><a href="#reversing-an-array">Reversing an Array</a></li>
+<li><a href="#finding-the-minimum-number">Finding the Minimum Number</a></li>
+<li><a href="#converting-integers-to-strings">Converting Integers to Strings</a></li>
+<li><a href="#calculating-the-average-of-an-array">Calculating the Average of an Array</a></li>
+<li><a href="#checking-if-an-array-is-sorted">Checking if an Array is Sorted</a></li>
+<li><a href="#converting-strings-to-doubles">Converting Strings to Doubles</a></li>
+<li><a href="#searching-for-an-element-in-an-array">Searching for an Element in an Array</a></li>
+</ul>
+</li>
+<li><a href="#best-practices-for-using-java-code-snippets">Best Practices for Using Java Code Snippets</a><ul>
+<li><a href="#use-descriptive-variable-and-method-namess">Use Descriptive Variable and Method Namess</a></li>
+<li><a href="#follow-coding-conventionss">Follow Coding Conventionss</a></li>
+<li><a href="#handle-exceptions-properlyy">Handle Exceptions Properlyy</a></li>
+<li><a href="#use-meaningful-class-and-method-modifierss">Use Meaningful Class and Method Modifierss</a></li>
+<li><a href="#test-code-snippetss">Test Code Snippetss</a></li>
+</ul>
+</li>
+<li><a href="#optimizing-java-code-snippets-for-everyday-problems">Optimizing Java Code Snippets for Everyday Problems</a><ul>
+<li><a href="#use-efficient-data-structuress">Use Efficient Data Structuress</a></li>
+<li><a href="#minimize-memory-usagee">Minimize Memory Usagee</a></li>
+<li><a href="#avoid-unnecessary-operationss">Avoid Unnecessary Operationss</a></li>
+<li><a href="#use-efficient-algorithmss">Use Efficient Algorithmss</a></li>
+<li><a href="#avoid-unnecessary-string-concatenationn">Avoid Unnecessary String Concatenationn</a></li>
+</ul>
+</li>
+<li><a href="#libraries-and-frameworks-for-java-code-snippets">Libraries and Frameworks for Java Code Snippets</a><ul>
+<li><a href="#apache-commonss">Apache Commonss</a></li>
+<li><a href="#guavaa">Guavaa</a></li>
+<li><a href="#junitt">JUnitt</a></li>
+<li><a href="#spring-frameworkk">Spring Frameworkk</a></li>
+<li><a href="#jacksonn">Jacksonn</a></li>
+</ul>
+</li>
+<li><a href="#avoiding-common-mistakes-with-java-code-snippets">Avoiding Common Mistakes with Java Code Snippets</a><ul>
+<li><a href="#not-handling-exceptions-properlyy">Not Handling Exceptions Properlyy</a></li>
+<li><a href="#using-inefficient-data-structures-or-algorithmss">Using Inefficient Data Structures or Algorithmss</a></li>
+<li><a href="#not-testing-code-snippetss">Not Testing Code Snippetss</a></li>
+<li><a href="#ignoring-coding-conventionss">Ignoring Coding Conventionss</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="intro-calculating-factorial">Intro: Calculating Factorial<a class="headerlink" href="#intro-calculating-factorial" title="Permanent link">&para;</a></h2>
+<p>The factorial of a non-negative integer n is denoted by n! and is the product of all positive integers less than or equal to n.</p>
+<p>Here's a Java code snippet that calculates the factorial of a given number:</p>
+<div class="highlight"><pre><span></span><code>public class FactorialCalculator {
+  public static int factorial(int num) {
+    if (num == 0 || num == 1) {
+      return 1;
+    } else {
+      return num * factorial(num - 1);
+    }
+  }
+
+  public static void main(String[] args) {
+    int number = 5;
+    int result = factorial(number);
+    System.out.println(&quot;The factorial of &quot; + number + &quot; is: &quot; + result);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>FactorialCalculator</code> class with a <code>factorial</code> method that takes an integer as input and recursively calculates its factorial. The <code>main</code> method demonstrates the usage of the <code>factorial</code> method by calculating and printing the factorial of the number 5.</p>
+<h3 id="finding-the-maximum-number">Finding the Maximum Number<a class="headerlink" href="#finding-the-maximum-number" title="Permanent link">&para;</a></h3>
+<p>You can iterate over the array elements and keep track of the maximum number found so far.</p>
+<p>Here's a Java code snippet that finds the maximum number in an array:</p>
+<div class="highlight"><pre><span></span><code>public class MaximumNumberFinder {
+  public static int findMaximum(int[] numbers) {
+    if (numbers.length == 0) {
+      throw new IllegalArgumentException(&quot;Array cannot be empty&quot;);
+    }
+
+    int max = numbers[0];
+    for (int i = 1; i &lt; numbers.length; i++) {
+      if (numbers[i] &gt; max) {
+        max = numbers[i];
+      }
+    }
+    return max;
+  }
+
+  public static void main(String[] args) {
+    int[] numbers = { 5, 2, 8, 3, 1 };
+    int maximum = findMaximum(numbers);
+    System.out.println(&quot;The maximum number in the array is: &quot; + maximum);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>MaximumNumberFinder</code> class with a <code>findMaximum</code> method that takes an array of integers as input and iterates over the elements to find the maximum number. The <code>main</code> method demonstrates the usage of the <code>findMaximum</code> method by finding and printing the maximum number in the array { 5, 2, 8, 3, 1 }.</p>
+<h3 id="reversing-a-string">Reversing a String<a class="headerlink" href="#reversing-a-string" title="Permanent link">&para;</a></h3>
+<p>There are multiple approaches to solve this problem, such as using a StringBuilder or converting the string to a character array.</p>
+<p>Here's a Java code snippet that reverses a given string:</p>
+<div class="highlight"><pre><span></span><code>public class StringReverser {
+  public static String reverseString(String str) {
+    StringBuilder reversed = new StringBuilder(str);
+    return reversed.reverse().toString();
+  }
+
+  public static void main(String[] args) {
+    String original = &quot;Hello, World!&quot;;
+    String reversed = reverseString(original);
+    System.out.println(&quot;The reversed string is: &quot; + reversed);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>StringReverser</code> class with a <code>reverseString</code> method that takes a string as input and uses a <code>StringBuilder</code> to reverse it. The <code>main</code> method demonstrates the usage of the <code>reverseString</code> method by reversing and printing the string "Hello, World!".</p>
+<h3 id="checking-if-a-number-is-prime">Checking if a Number is Prime<a class="headerlink" href="#checking-if-a-number-is-prime" title="Permanent link">&para;</a></h3>
+<p>A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.</p>
+<p>Here's a Java code snippet that checks if a given number is prime:</p>
+<div class="highlight"><pre><span></span><code>public class PrimeNumberChecker {
+  public static boolean isPrime(int num) {
+    if (num &lt;= 1) {
+      return false;
+    }
+    for (int i = 2; i &lt;= Math.sqrt(num); i++) {
+      if (num % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  public static void main(String[] args) {
+    int number = 17;
+    boolean isPrime = isPrime(number);
+    System.out.println(number + &quot; is prime? &quot; + isPrime);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>PrimeNumberChecker</code> class with an <code>isPrime</code> method that takes an integer as input and checks if it is prime. The method uses a loop to iterate over the numbers from 2 to the square root of the input number and checks if any of them divide the number evenly. If a divisor is found, the number is not prime. The <code>main</code> method demonstrates the usage of the <code>isPrime</code> method by checking and printing whether the number 17 is prime.</p>
+<h3 id="sorting-an-array">Sorting an Array<a class="headerlink" href="#sorting-an-array" title="Permanent link">&para;</a></h3>
+<p>There are various sorting algorithms available, such as bubble sort, selection sort, insertion sort, merge sort, and quicksort.</p>
+<p>Here's a Java code snippet that sorts an array in ascending order using the bubble sort algorithm:</p>
+<div class="highlight"><pre><span></span><code>public class ArraySorter {
+  public static void bubbleSort(int[] array) {
+    int n = array.length;
+    for (int i = 0; i &lt; n - 1; i++) {
+      for (int j = 0; j &lt; n - i - 1; j++) {
+        if (array[j] &gt; array[j + 1]) {
+          int temp = array[j];
+          array[j] = array[j + 1];
+          array[j + 1] = temp;
+        }
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    int[] array = { 5, 2, 8, 3, 1 };
+    bubbleSort(array);
+    System.out.println(&quot;The sorted array is: &quot; + Arrays.toString(array));
+  }
+}
+</code></pre></div>
+<p>This code snippet defines an <code>ArraySorter</code> class with a <code>bubbleSort</code> method that takes an array of integers as input and sorts it in ascending order using the bubble sort algorithm. The <code>main</code> method demonstrates the usage of the <code>bubbleSort</code> method by sorting and printing the array { 5, 2, 8, 3, 1 }.</p>
+<h3 id="finding-the-fibonacci-sequence">Finding the Fibonacci Sequence<a class="headerlink" href="#finding-the-fibonacci-sequence" title="Permanent link">&para;</a></h3>
+<p>The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1.</p>
+<p>Here's a Java code snippet that generates the Fibonacci sequence up to a given number of terms:</p>
+<div class="highlight"><pre><span></span><code>public class FibonacciSequenceGenerator {
+  public static void generateFibonacci(int numTerms) {
+    int firstTerm = 0;
+    int secondTerm = 1;
+    System.out.print(firstTerm + &quot; &quot; + secondTerm);
+
+    for (int i = 2; i &lt; numTerms; i++) {
+      int nextTerm = firstTerm + secondTerm;
+      System.out.print(&quot; &quot; + nextTerm);
+      firstTerm = secondTerm;
+      secondTerm = nextTerm;
+    }
+  }
+
+  public static void main(String[] args) {
+    int numTerms = 10;
+    generateFibonacci(numTerms);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>FibonacciSequenceGenerator</code> class with a <code>generateFibonacci</code> method that takes the number of terms as input and generates the Fibonacci sequence up to that number of terms. The method uses a loop to calculate and print each term in the sequence. The <code>main</code> method demonstrates the usage of the <code>generateFibonacci</code> method by generating and printing the Fibonacci sequence with 10 terms.</p>
+<h3 id="converting-strings-to-integers">Converting Strings to Integers<a class="headerlink" href="#converting-strings-to-integers" title="Permanent link">&para;</a></h3>
+<p>This is often needed when dealing with user input or parsing data from external sources.</p>
+<p>Here's a Java code snippet that converts a string to an integer:</p>
+<div class="highlight"><pre><span></span><code>public class StringToIntConverter {
+  public static int convertStringToInt(String str) {
+    try {
+      return Integer.parseInt(str);
+    } catch (NumberFormatException e) {
+      throw new IllegalArgumentException(&quot;Invalid integer format&quot;);
+    }
+  }
+
+  public static void main(String[] args) {
+    String str = &quot;123&quot;;
+    int num = convertStringToInt(str);
+    System.out.println(&quot;The converted integer is: &quot; + num);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>StringToIntConverter</code> class with a <code>convertStringToInt</code> method that takes a string as input and uses the <code>parseInt</code> method from the <code>Integer</code> class to convert it to an integer. The method also handles the case where the string is not a valid integer format by throwing an <code>IllegalArgumentException</code>. The <code>main</code> method demonstrates the usage of the <code>convertStringToInt</code> method by converting and printing the string "123" as an integer.</p>
+<h3 id="generating-random-numbers">Generating Random Numbers<a class="headerlink" href="#generating-random-numbers" title="Permanent link">&para;</a></h3>
+<p>Generating random numbers is a common requirement in Java programming. The <code>java.util.Random</code> class provides methods for generating random numbers of different types.</p>
+<p>Here's a Java code snippet that generates a random number between a given range:</p>
+<div class="highlight"><pre><span></span><code>import java.util.Random;
+
+public class RandomNumberGenerator {
+  public static int generateRandomNumber(int min, int max) {
+    Random random = new Random();
+    return random.nextInt(max - min + 1) + min;
+  }
+
+  public static void main(String[] args) {
+    int min = 1;
+    int max = 100;
+    int randomNumber = generateRandomNumber(min, max);
+    System.out.println(&quot;The generated random number is: &quot; + randomNumber);
+  }
+}
+</code></pre></div>
+<p>This code snippet imports the <code>java.util.Random</code> class and defines a <code>RandomNumberGenerator</code> class with a <code>generateRandomNumber</code> method that takes a minimum and maximum value and uses the <code>nextInt</code> method of the <code>Random</code> class to generate a random number within the specified range. The <code>main</code> method demonstrates the usage of the <code>generateRandomNumber</code> method by generating and printing a random number between 1 and 100.</p>
+<h3 id="checking-if-a-string-is-palindrome">Checking if a String is Palindrome<a class="headerlink" href="#checking-if-a-string-is-palindrome" title="Permanent link">&para;</a></h3>
+<p>A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward.</p>
+<p>Here's a Java code snippet that checks if a given string is a palindrome:</p>
+<div class="highlight"><pre><span></span><code>public class PalindromeChecker {
+  public static boolean isPalindrome(String str) {
+    String reversed = new StringBuilder(str).reverse().toString();
+    return str.equals(reversed);
+  }
+
+  public static void main(String[] args) {
+    String word = &quot;racecar&quot;;
+    boolean isPalindrome = isPalindrome(word);
+    System.out.println(word + &quot; is a palindrome? &quot; + isPalindrome);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>PalindromeChecker</code> class with an <code>isPalindrome</code> method that takes a string as input and uses a <code>StringBuilder</code> to reverse the string. The method then compares the original string with the reversed string to check if they are equal. The <code>main</code> method demonstrates the usage of the <code>isPalindrome</code> method by checking and printing whether the word "racecar" is a palindrome.</p>
+<h3 id="getting-the-current-date-and-time">Getting the Current Date and Time<a class="headerlink" href="#getting-the-current-date-and-time" title="Permanent link">&para;</a></h3>
+<p>Getting the current date and time is a common requirement in Java programming. The <code>java.util.Date</code> and <code>java.util.Calendar</code> classes provide methods for working with dates and times.</p>
+<p>Here's a Java code snippet that gets the current date and time:</p>
+<div class="highlight"><pre><span></span><code>import java.util.Date;
+
+public class CurrentDateTimeGetter {
+  public static void main(String[] args) {
+    Date currentDate = new Date();
+    System.out.println(&quot;Current date and time: &quot; + currentDate);
+  }
+}
+</code></pre></div>
+<p>This code snippet imports the <code>java.util.Date</code> class and defines a <code>CurrentDateTimeGetter</code> class with a <code>main</code> method that creates a new <code>Date</code> object to represent the current date and time. The <code>main</code> method then prints the current date and time using the <code>toString</code> method of the <code>Date</code> class.</p>
+<h3 id="removing-duplicates-from-an-array">Removing Duplicates from an Array<a class="headerlink" href="#removing-duplicates-from-an-array" title="Permanent link">&para;</a></h3>
+<p>There are various approaches to solve this problem, such as using a <code>Set</code> or creating a new array without the duplicates.</p>
+<p>Here's a Java code snippet that removes duplicates from an array:</p>
+<div class="highlight"><pre><span></span><code>import java.util.Arrays;
+import java.util.LinkedHashSet;
+
+public class ArrayDuplicateRemover {
+  public static int[] removeDuplicates(int[] array) {
+    LinkedHashSet&lt;Integer&gt; set = new LinkedHashSet&lt;&gt;();
+    for (int num : array) {
+      set.add(num);
+    }
+    int[] result = new int[set.size()];
+    int i = 0;
+    for (int num : set) {
+      result[i++] = num;
+    }
+    return result;
+  }
+
+  public static void main(String[] args) {
+    int[] array = { 1, 2, 3, 1, 4, 2, 5 };
+    int[] uniqueArray = removeDuplicates(array);
+    System.out.println(&quot;Array with duplicates: &quot; + Arrays.toString(array));
+    System.out.println(&quot;Array without duplicates: &quot; + Arrays.toString(uniqueArray));
+  }
+}
+</code></pre></div>
+<p>This code snippet imports the <code>java.util.Arrays</code> and <code>java.util.LinkedHashSet</code> classes and defines an <code>ArrayDuplicateRemover</code> class with a <code>removeDuplicates</code> method that takes an array of integers as input. The method uses a <code>LinkedHashSet</code> to store unique elements from the array while preserving the order. It then creates a new array with the unique elements and returns it. The <code>main</code> method demonstrates the usage of the <code>removeDuplicates</code> method by removing duplicates from an array and printing both the original and the resulting array.</p>
+<h3 id="finding-the-length-of-a-string">Finding the Length of a String<a class="headerlink" href="#finding-the-length-of-a-string" title="Permanent link">&para;</a></h3>
+<p>Finding the length of a string is a common operation in Java programming. The <code>length</code> method of the <code>String</code> class can be used to determine the number of characters in a string.</p>
+<p>Here's a Java code snippet that finds the length of a string:</p>
+<div class="highlight"><pre><span></span><code>public class StringLengthFinder {
+  public static int findLength(String str) {
+    return str.length();
+  }
+
+  public static void main(String[] args) {
+    String str = &quot;Hello, World!&quot;;
+    int length = findLength(str);
+    System.out.println(&quot;The length of the string is: &quot; + length);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>StringLengthFinder</code> class with a <code>findLength</code> method that takes a string as input and uses the <code>length</code> method of the <code>String</code> class to find its length. The <code>main</code> method demonstrates the usage of the <code>findLength</code> method by finding and printing the length of the string "Hello, World!".</p>
+<h3 id="checking-if-two-strings-are-anagrams">Checking if Two Strings are Anagrams<a class="headerlink" href="#checking-if-two-strings-are-anagrams" title="Permanent link">&para;</a></h3>
+<p>An anagram is a word or phrase formed by rearranging the letters of another word or phrase.</p>
+<p>Here's a Java code snippet that checks if two strings are anagrams:</p>
+<div class="highlight"><pre><span></span><code>import java.util.Arrays;
+
+public class AnagramChecker {
+  public static boolean areAnagrams(String str1, String str2) {
+    char[] charArray1 = str1.toLowerCase().toCharArray();
+    char[] charArray2 = str2.toLowerCase().toCharArray();
+
+    Arrays.sort(charArray1);
+    Arrays.sort(charArray2);
+
+    return Arrays.equals(charArray1, charArray2);
+  }
+
+  public static void main(String[] args) {
+    String word1 = &quot;listen&quot;;
+    String word2 = &quot;silent&quot;;
+    boolean areAnagrams = areAnagrams(word1, word2);
+    System.out.println(word1 + &quot; and &quot; + word2 + &quot; are anagrams? &quot; + areAnagrams);
+  }
+}
+</code></pre></div>
+<p>This code snippet imports the <code>java.util.Arrays</code> class and defines an <code>AnagramChecker</code> class with an <code>areAnagrams</code> method that takes two strings as input. The method converts the strings to lowercase and then converts them to character arrays. It then sorts the character arrays and uses the <code>equals</code> method of the <code>Arrays</code> class to check if they are equal. The <code>main</code> method demonstrates the usage of the <code>areAnagrams</code> method by checking and printing whether the words "listen" and "silent" are anagrams.</p>
+<h3 id="calculating-the-power-of-a-number">Calculating the Power of a Number<a class="headerlink" href="#calculating-the-power-of-a-number" title="Permanent link">&para;</a></h3>
+<p>The power of a number represents how many times the number is multiplied by itself.</p>
+<p>Here's a Java code snippet that calculates the power of a given number:</p>
+<div class="highlight"><pre><span></span><code>public class PowerCalculator {
+  public static double calculatePower(double base, int exponent) {
+    if (exponent == 0) {
+      return 1;
+    } else if (exponent &gt; 0) {
+      double result = 1;
+      for (int i = 0; i &lt; exponent; i++) {
+        result *= base;
+      }
+      return result;
+    } else {
+      double result = 1;
+      for (int i = 0; i &gt; exponent; i--) {
+        result /= base;
+      }
+      return result;
+    }
+  }
+
+  public static void main(String[] args) {
+    double base = 2;
+    int exponent = 3;
+    double result = calculatePower(base, exponent);
+    System.out.println(base + &quot; raised to the power of &quot; + exponent + &quot; is: &quot; + result);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>PowerCalculator</code> class with a <code>calculatePower</code> method that takes a base number and an exponent as input and calculates the result of raising the base to the power of the exponent. The method uses a loop to perform the multiplication or division based on the sign of the exponent. The <code>main</code> method demonstrates the usage of the <code>calculatePower</code> method by calculating and printing the result of raising the number 2 to the power of 3.</p>
+<h3 id="reversing-an-array">Reversing an Array<a class="headerlink" href="#reversing-an-array" title="Permanent link">&para;</a></h3>
+<p>There are multiple approaches to solve this problem, such as using two pointers or creating a new array.</p>
+<p>Here's a Java code snippet that reverses an array:</p>
+<div class="highlight"><pre><span></span><code>import java.util.Arrays;
+
+public class ArrayReverser {
+  public static void reverseArray(int[] array) {
+    int left = 0;
+    int right = array.length - 1;
+
+    while (left &lt; right) {
+      int temp = array[left];
+      array[left] = array[right];
+      array[right] = temp;
+      left++;
+      right--;
+    }
+  }
+
+  public static void main(String[] args) {
+    int[] array = { 1, 2, 3, 4, 5 };
+    System.out.println(&quot;Array before reversing: &quot; + Arrays.toString(array));
+    reverseArray(array);
+    System.out.println(&quot;Array after reversing: &quot; + Arrays.toString(array));
+  }
+}
+</code></pre></div>
+<p>This code snippet imports the <code>java.util.Arrays</code> class and defines an <code>ArrayReverser</code> class with a <code>reverseArray</code> method that takes an array of integers as input and reverses its elements using two pointers. The <code>main</code> method demonstrates the usage of the <code>reverseArray</code> method by reversing and printing an array { 1, 2, 3, 4, 5 }.</p>
+<h3 id="finding-the-minimum-number">Finding the Minimum Number<a class="headerlink" href="#finding-the-minimum-number" title="Permanent link">&para;</a></h3>
+<p>You can iterate over the array elements and keep track of the minimum number found so far.</p>
+<p>Here's a Java code snippet that finds the minimum number in an array:</p>
+<div class="highlight"><pre><span></span><code>public class MinimumNumberFinder {
+  public static int findMinimum(int[] numbers) {
+    if (numbers.length == 0) {
+      throw new IllegalArgumentException(&quot;Array cannot be empty&quot;);
+    }
+
+    int min = numbers[0];
+    for (int i = 1; i &lt; numbers.length; i++) {
+      if (numbers[i] &lt; min) {
+        min = numbers[i];
+      }
+    }
+    return min;
+  }
+
+  public static void main(String[] args) {
+    int[] numbers = { 5, 2, 8, 3, 1 };
+    int minimum = findMinimum(numbers);
+    System.out.println(&quot;The minimum number in the array is: &quot; + minimum);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>MinimumNumberFinder</code> class with a <code>findMinimum</code> method that takes an array of integers as input and iterates over the elements to find the minimum number. The <code>main</code> method demonstrates the usage of the <code>findMinimum</code> method by finding and printing the minimum number in the array { 5, 2, 8, 3, 1 }.</p>
+<h3 id="converting-integers-to-strings">Converting Integers to Strings<a class="headerlink" href="#converting-integers-to-strings" title="Permanent link">&para;</a></h3>
+<p>This is often needed when concatenating numbers with strings or when formatting output.</p>
+<p>Here's a Java code snippet that converts an integer to a string:</p>
+<div class="highlight"><pre><span></span><code>public class IntToStringConverter {
+  public static String convertIntToString(int num) {
+    return String.valueOf(num);
+  }
+
+  public static void main(String[] args) {
+    int num = 123;
+    String str = convertIntToString(num);
+    System.out.println(&quot;The converted string is: &quot; + str);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines an <code>IntToStringConverter</code> class with a <code>convertIntToString</code> method that takes an integer as input and uses the <code>valueOf</code> method of the <code>String</code> class to convert it to a string. The <code>main</code> method demonstrates the usage of the <code>convertIntToString</code> method by converting and printing the integer 123 as a string.</p>
+<h3 id="calculating-the-average-of-an-array">Calculating the Average of an Array<a class="headerlink" href="#calculating-the-average-of-an-array" title="Permanent link">&para;</a></h3>
+<p>You can iterate over the array elements and calculate the sum, then divide it by the number of elements.</p>
+<p>Here's a Java code snippet that calculates the average of an array:</p>
+<div class="highlight"><pre><span></span><code>public class ArrayAverageCalculator {
+  public static double calculateAverage(int[] array) {
+    if (array.length == 0) {
+      return 0;
+    }
+
+    int sum = 0;
+    for (int num : array) {
+      sum += num;
+    }
+    return (double) sum / array.length;
+  }
+
+  public static void main(String[] args) {
+    int[] array = { 5, 2, 8, 3, 1 };
+    double average = calculateAverage(array);
+    System.out.println(&quot;The average of the array is: &quot; + average);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines an <code>ArrayAverageCalculator</code> class with a <code>calculateAverage</code> method that takes an array of integers as input and calculates its average by summing all the elements and dividing by the number of elements. The <code>main</code> method demonstrates the usage of the <code>calculateAverage</code> method by calculating and printing the average of the array { 5, 2, 8, 3, 1 }.</p>
+<h3 id="checking-if-an-array-is-sorted">Checking if an Array is Sorted<a class="headerlink" href="#checking-if-an-array-is-sorted" title="Permanent link">&para;</a></h3>
+<p>You can iterate over the array elements and compare adjacent elements to determine if they are in the correct order.</p>
+<p>Here's a Java code snippet that checks if an array is sorted in ascending order:</p>
+<div class="highlight"><pre><span></span><code>public class ArraySortChecker {
+  public static boolean isSorted(int[] array) {
+    for (int i = 1; i &lt; array.length; i++) {
+      if (array[i] &lt; array[i - 1]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  public static void main(String[] args) {
+    int[] array = { 1, 2, 3, 4, 5 };
+    boolean isSorted = isSorted(array);
+    System.out.println(&quot;Is the array sorted? &quot; + isSorted);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines an <code>ArraySortChecker</code> class with an <code>isSorted</code> method that takes an array of integers as input and iterates over the elements to check if they are in ascending order. The <code>main</code> method demonstrates the usage of the <code>isSorted</code> method by checking and printing whether the array { 1, 2, 3, 4, 5 } is sorted.</p>
+<h3 id="converting-strings-to-doubles">Converting Strings to Doubles<a class="headerlink" href="#converting-strings-to-doubles" title="Permanent link">&para;</a></h3>
+<p>This is often needed when dealing with user input or parsing data from external sources.</p>
+<p>Here's a Java code snippet that converts a string to a double:</p>
+<div class="highlight"><pre><span></span><code>public class StringToDoubleConverter {
+  public static double convertStringToDouble(String str) {
+    try {
+      return Double.parseDouble(str);
+    } catch (NumberFormatException e) {
+      throw new IllegalArgumentException(&quot;Invalid double format&quot;);
+    }
+  }
+
+  public static void main(String[] args) {
+    String str = &quot;3.14&quot;;
+    double num = convertStringToDouble(str);
+    System.out.println(&quot;The converted double is: &quot; + num);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines a <code>StringToDoubleConverter</code> class with a <code>convertStringToDouble</code> method that takes a string as input and uses the <code>parseDouble</code> method of the <code>Double</code> class to convert it to a double. The method also handles the case where the string is not a valid double format by throwing an <code>IllegalArgumentException</code>. The <code>main</code> method demonstrates the usage of the <code>convertStringToDouble</code> method by converting and printing the string "3.14" as a double.</p>
+<h3 id="searching-for-an-element-in-an-array">Searching for an Element in an Array<a class="headerlink" href="#searching-for-an-element-in-an-array" title="Permanent link">&para;</a></h3>
+<p>You can iterate over the array elements and compare each element with the target element.</p>
+<p>Here's a Java code snippet that searches for an element in an array:</p>
+<div class="highlight"><pre><span></span><code>public class ArraySearcher {
+  public static boolean searchElement(int[] array, int target) {
+    for (int num : array) {
+      if (num == target) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public static void main(String[] args) {
+    int[] array = { 5, 2, 8, 3, 1 };
+    int target = 8;
+    boolean found = searchElement(array, target);
+    System.out.println(&quot;Is &quot; + target + &quot; present in the array? &quot; + found);
+  }
+}
+</code></pre></div>
+<p>This code snippet defines an <code>ArraySearcher</code> class with a <code>searchElement</code> method that takes an array of integers and a target number as input. The method iterates over the elements of the array and checks if any of them match the target number. If a match is found, it returns true; otherwise, it returns false. The <code>main</code> method demonstrates the usage of the <code>searchElement</code> method by searching for the number 8 in the array { 5, 2, 8, 3, 1 }.</p>
+<h2 id="best-practices-for-using-java-code-snippets">Best Practices for Using Java Code Snippets<a class="headerlink" href="#best-practices-for-using-java-code-snippets" title="Permanent link">&para;</a></h2>
+<p>When using Java code snippets, it's important to follow best practices to ensure code readability, maintainability, and performance. Here are some best practices for using Java code snippets:</p>
+<h3 id="use-descriptive-variable-and-method-namess">Use Descriptive Variable and Method Namess<a class="headerlink" href="#use-descriptive-variable-and-method-namess" title="Permanent link">&para;</a></h3>
+<p>Using meaningful variable and method names is essential for code readability. Avoid using single-letter variable names or generic names like <code>temp</code> or <code>result</code>. Instead, use descriptive names that accurately represent the purpose of the variable or method.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+int x = 5;
+
+// Good
+int numberOfStudents = 5;
+</code></pre></div>
+<h3 id="follow-coding-conventionss">Follow Coding Conventionss<a class="headerlink" href="#follow-coding-conventionss" title="Permanent link">&para;</a></h3>
+<p>Following coding conventions improves code consistency and makes it easier for other developers to read and understand your code. Use proper indentations, consistent naming conventions (e.g., camel case for variables and methods, uppercase for constants), and adhere to the Java naming conventions.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+public static void calculateaverage(int[] numbers) {
+    // code here
+}
+
+// Good
+public static void calculateAverage(int[] numbers) {
+    // code here
+}
+</code></pre></div>
+<p>Comments should be used to explain complex logic or provide additional information that is not obvious from the code itself. Avoid unnecessary or redundant comments, as they can clutter the code and make it harder to read.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+int x = 5; // initialize x to 5
+
+// Good
+int numberOfStudents = 5;
+</code></pre></div>
+<h3 id="handle-exceptions-properlyy">Handle Exceptions Properlyy<a class="headerlink" href="#handle-exceptions-properlyy" title="Permanent link">&para;</a></h3>
+<p>When dealing with exceptions, it's important to handle them properly to avoid unexpected program behavior or crashes. Use try-catch blocks to catch and handle exceptions, or throw exceptions when appropriate.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+public static int divide(int a, int b) {
+    return a / b;
+}
+
+// Good
+public static int divide(int a, int b) {
+    try {
+        return a / b;
+    } catch (ArithmeticException e) {
+        throw new IllegalArgumentException(&quot;Cannot divide by zero&quot;);
+    }
+}
+</code></pre></div>
+<h3 id="use-meaningful-class-and-method-modifierss">Use Meaningful Class and Method Modifierss<a class="headerlink" href="#use-meaningful-class-and-method-modifierss" title="Permanent link">&para;</a></h3>
+<p>Using appropriate class and method modifiers helps improve code clarity and maintainability. Use <code>public</code>, <code>private</code>, and <code>protected</code> modifiers to control the visibility of classes and methods, and use <code>final</code> and <code>static</code> modifiers when appropriate.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+class MyClass {
+    // code here
+}
+
+// Good
+public final class MyClass {
+    // code here
+}
+</code></pre></div>
+<h3 id="test-code-snippetss">Test Code Snippetss<a class="headerlink" href="#test-code-snippetss" title="Permanent link">&para;</a></h3>
+<p>Before using code snippets in production, it's important to thoroughly test them to ensure they work as intended and handle edge cases correctly. Write unit tests to cover different scenarios and validate the expected behavior of the code.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>@Test
+public void testFindMaximum() {
+    int[] numbers = { 5, 2, 8, 3, 1 };
+    assertEquals(8, MaximumNumberFinder.findMaximum(numbers));
+}
+</code></pre></div>
+<h2 id="optimizing-java-code-snippets-for-everyday-problems">Optimizing Java Code Snippets for Everyday Problems<a class="headerlink" href="#optimizing-java-code-snippets-for-everyday-problems" title="Permanent link">&para;</a></h2>
+<p>Optimizing Java code snippets can improve performance and efficiency, especially for code that is executed frequently or deals with large datasets. Here are some techniques to optimize Java code snippets for everyday problems:</p>
+<h3 id="use-efficient-data-structuress">Use Efficient Data Structuress<a class="headerlink" href="#use-efficient-data-structuress" title="Permanent link">&para;</a></h3>
+<p>Choosing the right data structure can significantly impact the performance of your code. For example, use <code>ArrayList</code> instead of <code>LinkedList</code> when frequent random access is required, and use <code>HashMap</code> instead of <code>ArrayList</code> when efficient lookup is needed.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+LinkedList&lt;Integer&gt; list = new LinkedList&lt;&gt;();
+list.add(1);
+list.add(2);
+list.add(3);
+
+// Good
+ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+list.add(1);
+list.add(2);
+list.add(3);
+</code></pre></div>
+<h3 id="minimize-memory-usagee">Minimize Memory Usagee<a class="headerlink" href="#minimize-memory-usagee" title="Permanent link">&para;</a></h3>
+<p>Optimizing memory usage can improve the performance of your code, especially when dealing with large datasets. Avoid creating unnecessary objects or using excessive memory, and release resources as soon as they are no longer needed.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+for (int i = 0; i &lt; 1000000; i++) {
+    String str = &quot;Value: &quot; + i;
+    // code here
+}
+
+// Good
+for (int i = 0; i &lt; 1000000; i++) {
+    StringBuilder sb = new StringBuilder();
+    sb.append(&quot;Value: &quot;).append(i);
+    String str = sb.toString();
+    // code here
+}
+</code></pre></div>
+<h3 id="avoid-unnecessary-operationss">Avoid Unnecessary Operationss<a class="headerlink" href="#avoid-unnecessary-operationss" title="Permanent link">&para;</a></h3>
+<p>Avoid performing unnecessary operations or calculations that can be avoided. Simplify your code by removing redundant statements or computations.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+for (int i = 0; i &lt; array.length; i++) {
+    int num = array[i];
+    if (num &gt; 0) {
+        positiveCount++;
+    } else if (num &lt; 0) {
+        negativeCount++;
+    } else {
+        zeroCount++;
+    }
+}
+
+// Good
+for (int num : array) {
+    if (num &gt; 0) {
+        positiveCount++;
+    } else if (num &lt; 0) {
+        negativeCount++;
+    } else {
+        zeroCount++;
+    }
+}
+</code></pre></div>
+<h3 id="use-efficient-algorithmss">Use Efficient Algorithmss<a class="headerlink" href="#use-efficient-algorithmss" title="Permanent link">&para;</a></h3>
+<p>Choosing efficient algorithms can significantly impact the performance of your code. For example, use quicksort instead of bubblesort for sorting large arrays, and use binary search instead of linear search for finding elements in sorted arrays.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+for (int i = 0; i &lt; array.length; i++) {
+    if (array[i] == target) {
+        return i;
+    }
+}
+
+// Good
+int low = 0;
+int high = array.length - 1;
+while (low &lt;= high) {
+    int mid = (low + high) / 2;
+    if (array[mid] == target) {
+        return mid;
+    } else if (array[mid] &lt; target) {
+        low = mid + 1;
+    } else {
+        high = mid - 1;
+    }
+}
+</code></pre></div>
+<h3 id="avoid-unnecessary-string-concatenationn">Avoid Unnecessary String Concatenationn<a class="headerlink" href="#avoid-unnecessary-string-concatenationn" title="Permanent link">&para;</a></h3>
+<p>String concatenation can be expensive, especially when performed repeatedly in loops. Use <code>StringBuilder</code> or <code>StringBuffer</code> instead of concatenating strings using the <code>+</code> operator.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+String result = &quot;&quot;;
+for (String str : strings) {
+    result += str;
+}
+
+// Good
+StringBuilder sb = new StringBuilder();
+for (String str : strings) {
+    sb.append(str);
+}
+String result = sb.toString();
+</code></pre></div>
+<h2 id="libraries-and-frameworks-for-java-code-snippets">Libraries and Frameworks for Java Code Snippets<a class="headerlink" href="#libraries-and-frameworks-for-java-code-snippets" title="Permanent link">&para;</a></h2>
+<p>Java has a rich ecosystem of libraries and frameworks that provide ready-to-use code snippets for various purposes. Here are some popular libraries and frameworks for Java:</p>
+<h3 id="apache-commonss">Apache Commonss<a class="headerlink" href="#apache-commonss" title="Permanent link">&para;</a></h3>
+<p>Apache Commons is a collection of reusable Java components that provide implementations of common utility functions, data structures, and algorithms. It includes libraries for string manipulation, file handling, math operations, and more.</p>
+<p>Link: <a href="https://commons.apache.org/">Apache Commons</a></p>
+<h3 id="guavaa">Guavaa<a class="headerlink" href="#guavaa" title="Permanent link">&para;</a></h3>
+<p>Guava is a set of core libraries for Java that provide useful utility classes and data structures not found in the standard JDK. It includes libraries for collections, caching, functional programming, concurrency, and more.</p>
+<p>Link: <a href="https://github.com/google/guava">Guava</a></p>
+<h3 id="junitt">JUnitt<a class="headerlink" href="#junitt" title="Permanent link">&para;</a></h3>
+<p>JUnit is a unit testing framework for Java that provides a simple and efficient way to write and run tests for your code. It includes annotations, assertions, and test runners to facilitate the testing process.</p>
+<p>Link: <a href="https://junit.org/junit5/">JUnit</a></p>
+<h3 id="spring-frameworkk">Spring Frameworkk<a class="headerlink" href="#spring-frameworkk" title="Permanent link">&para;</a></h3>
+<p>Spring Framework is a comprehensive framework for Java that provides support for building enterprise-grade applications. It includes libraries for dependency injection, MVC web development, data access, security, and more.</p>
+<p>Link: <a href="https://spring.io/">Spring Framework</a></p>
+<h3 id="jacksonn">Jacksonn<a class="headerlink" href="#jacksonn" title="Permanent link">&para;</a></h3>
+<p>Jackson is a high-performance JSON processing library for Java that provides methods for reading and writing JSON data. It includes annotations and converters for easy serialization and deserialization of Java objects.</p>
+<p>Link: <a href="https://github.com/FasterXML/jackson">Jackson</a></p>
+<h2 id="avoiding-common-mistakes-with-java-code-snippets">Avoiding Common Mistakes with Java Code Snippets<a class="headerlink" href="#avoiding-common-mistakes-with-java-code-snippets" title="Permanent link">&para;</a></h2>
+<p>When using Java code snippets, it's important to avoid common mistakes that can lead to errors or inefficient code. Here are some common mistakes to avoid:</p>
+<h3 id="not-handling-exceptions-properlyy">Not Handling Exceptions Properlyy<a class="headerlink" href="#not-handling-exceptions-properlyy" title="Permanent link">&para;</a></h3>
+<p>Failing to handle exceptions can result in unexpected program behavior or crashes. Always handle exceptions by using try-catch blocks or throwing them when appropriate.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+public static int divide(int a, int b) {
+    return a / b; // May throw ArithmeticException
+}
+
+// Good
+public static int divide(int a, int b) {
+    try {
+        return a / b;
+    } catch (ArithmeticException e) {
+        throw new IllegalArgumentException(&quot;Cannot divide by zero&quot;);
+    }
+}
+</code></pre></div>
+<h3 id="using-inefficient-data-structures-or-algorithmss">Using Inefficient Data Structures or Algorithmss<a class="headerlink" href="#using-inefficient-data-structures-or-algorithmss" title="Permanent link">&para;</a></h3>
+<p>Choosing inefficient data structures or algorithms can lead to poor performance. Always choose the appropriate data structure or algorithm for the problem at hand.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+LinkedList&lt;Integer&gt; list = new LinkedList&lt;&gt;();
+list.add(1);
+list.add(2);
+list.add(3);
+
+// Good
+ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+list.add(1);
+list.add(2);
+list.add(3);
+</code></pre></div>
+<h3 id="not-testing-code-snippetss">Not Testing Code Snippetss<a class="headerlink" href="#not-testing-code-snippetss" title="Permanent link">&para;</a></h3>
+<p>Failing to test code snippets can result in bugs or unexpected behavior. Always write unit tests to cover different scenarios and validate the expected behavior of your code.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>@Test
+public void testFindMaximum() {
+    int[] numbers = { 5, 2, 8, 3, 1 };
+    assertEquals(8, MaximumNumberFinder.findMaximum(numbers));
+}
+</code></pre></div>
+<h3 id="ignoring-coding-conventionss">Ignoring Coding Conventionss<a class="headerlink" href="#ignoring-coding-conventionss" title="Permanent link">&para;</a></h3>
+<p>Ignoring coding conventions can make your code harder to read and maintain. Always follow coding conventions, such as proper indentations, consistent naming conventions, and class/method modifiers.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>// Bad
+public static void calculateaverage(int[] numbers) {
+    // code here
+}
+
+// Good
+public static void calculateAverage(int[] numbers) {
+    // code here
+}
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlighting", "search.share"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
